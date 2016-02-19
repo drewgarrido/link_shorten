@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Link Shortener</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body style="text-align:center">
+<h1>Add some shortening to your life</h1>
+<form action="" method="post">
+<input name="url_text" type="text" style="width:20em;">
+<input type="submit" value="Shorten URL">
+</form>
+{% if shortened_url is defined %}
+<p>
+<a href="{{ shortened_url }}">localhost:5000/{{shortened_url}}</a>
+goes to <a href="{{ dest_url }}">{{ dest_url }}</a>
+</p>
+{% endif %}
+</body>
+</html>
